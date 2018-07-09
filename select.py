@@ -34,4 +34,4 @@ def total_years_and_hr_per_team_ordered_by_hr():
     return "SELECT team, COUNT(year), SUM(HR) FROM babe_ruth_stats GROUP BY(team) ORDER BY(HR) DESC;"
 
 def years_with_on_base_over_300():
-    return "SELECT year, hits + bb AS on_base FROM babe_ruth_stats GROUP BY(year) HAVING on_base >300;"
+    return "SELECT year, hits + bb AS on_base FROM babe_ruth_stats HAVING on_base >300;"
